@@ -20,4 +20,9 @@ class Person extends Model
 		'email',
 		'status'
 	];
+
+	public function devices()
+	{
+		$this->hasOne('App\Device');
+	}
 }

@@ -32,9 +32,10 @@ class SearchesController extends Controller
     	
     	if(!empty($title)) 
     	{
-	    	$deviceTitle = DB::table('devices')
-        		        ->where('title', 'like', "%{$title}%")
-                		->get();
+	    	// $deviceTitle = DB::table('devices')
+      //   		        ->where('title', 'like', "%{$title}%")
+      //           		->get();
+    		$deviceTitle  = Device::with('person')->where('title', 'LIKE', "%{$title}%")->get();
 		}
 		else
 		{

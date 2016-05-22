@@ -17,6 +17,12 @@ class Device extends Model
 	protected $fillable = [
 		'title',
 		'serial_number',
-		'description'
+		'description',
+		'person_id'
 	];
+
+	public function person()
+	{
+		return $this->belongsTo('App\Person');
+	}
 }

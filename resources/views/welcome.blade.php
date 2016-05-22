@@ -26,6 +26,7 @@
                     <tr>
                         <th>Device Name</th>
                         <th>Associated Person/Team</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +36,11 @@
                         <td>
                             {{ $device->title }}
                         </td>
-                        <td>Rana</td>
+                        <td>{{ $device->person->name }}</td>
+                        <td>
+                            <a href="{{ route('devices.show', $device->id) }}"><i class="fa fa-eye" aria-hidden="true">View</i></a> | 
+                            <a href="{{ route('devices.edit', $device->id) }}" ><i class="fa fa-pencil-square-o" aria-hidden="true">Edit</i>
+                        </td>
                     @endforeach
                     </tr>
                 </tbody>

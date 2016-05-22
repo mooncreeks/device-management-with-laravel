@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Device;
+use App\Person;
 
 use Session;
 
@@ -41,7 +42,12 @@ class DevicesController extends Controller
      */
     public function create()
     {
-        return view('devices.create');
+
+        $personList = Person::all();
+
+        //dd($deviceInfo);
+
+        return view('devices.create', compact('personList'));
     }
 
     /**
@@ -57,7 +63,9 @@ class DevicesController extends Controller
     	$this->validate($request,
     		['title' => 'required', 
     		 'serial_number' => 'required', 
-    		 'description' => 'required']
+    		 'description' => 'required',
+             'person_id' => 'required'
+             ]
     	);
 
         $input = $request->all();

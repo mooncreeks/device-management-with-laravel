@@ -17,7 +17,6 @@ class CreatePersonsTable extends Migration
             $table->string('name');
             $table->string('designation');
             $table->string('email')->unique();
-            $table->integer('device_id')->nullable();
             $table->integer('status');
             $table->timestamps();
         });

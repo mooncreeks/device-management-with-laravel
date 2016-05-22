@@ -17,6 +17,7 @@ class CreateDevicesTable extends Migration
             $table->string('title');
             $table->string('serial_number');
             $table->text('description');
+            $table->integer('person_id')->unsigned()->index();
             $table->timestamps();
         });
     }
