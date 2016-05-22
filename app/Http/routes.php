@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SearchesController@search');
 
 Route::auth();
 
@@ -25,4 +23,6 @@ Route::resource('persons', 'PersonsController');
 
 Route::resource('teams', 'TeamsController');
 
-Route::get('search', 'SearchController@search');
+Route::any('search', ['as'=>'searches.index', 'uses'=>'SearchesController@search'] );
+
+//Route::resource('queries', 'QueryController');

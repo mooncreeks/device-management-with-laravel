@@ -33,5 +33,5 @@
 		@endforeach
 	</tbody>
 </table>
-
+{!! $persons->links() !!}
 @stop

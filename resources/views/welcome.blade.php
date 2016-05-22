@@ -11,13 +11,16 @@
                     Your Application's Landing Page.
                 </div>
             </div> -->
-            @if(Auth::user())
+            @if (Auth::user())
             <table class="table">
                 <thead>
-                    {!! Form::open(['route' => 'persons.index', 'method' => 'GET']) !!}
-                    <div class="form-group text-right">
-                        {!! Form::text('name', null, ['class' => '']) !!}
-                        {!! Form::submit('Search', ['class' => 'btn btn-default btn-xs']) !!}
+
+                    {!! Form::open(['route' => 'searches.index', 'method' => 'get']) !!}
+                    <div class="input-group">
+                        {!! Form::text('title',null, ['class'=>'form-control']) !!}
+                      <span class="input-group-btn">
+                        {!! Form::submit('Search', ['class'=>'btn btn-secondary']) !!}
+                      </span>
                     </div>
                     {!! Form::close() !!}
                     <tr>
@@ -26,10 +29,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($deviceTitle as $device)
                     <tr>
+
                         <td>
-                            abc
+                            {{ $device->title }}
                         </td>
+                        <td>Rana</td>
+                    @endforeach
                     </tr>
                 </tbody>
             </table>
