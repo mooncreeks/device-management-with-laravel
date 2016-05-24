@@ -145,10 +145,5 @@ class DevicesController extends Controller
         Session::flash('flash_message', 'Device successfully deleted!');
 
         return redirect()->route('devices.index');
-    }
-
-    public function search() 
-    {
-        return 'hello search';
-    }
+    }    
 }

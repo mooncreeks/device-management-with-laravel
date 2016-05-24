@@ -24,7 +24,7 @@ class PersonsController extends Controller
      */
     public function index()
     {
-        $persons = Person::paginate(2);
+        $persons = Person::paginate(5);
         return view('persons.index')->withPersons($persons);
     }
 
