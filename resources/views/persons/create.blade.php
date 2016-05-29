@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Add a Person</h1>
+<h1>Add a Person / Team</h1>
 
 @include('partials.alerts.errors')
 

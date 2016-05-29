@@ -159,6 +159,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //datatables
+        Yajra\Datatables\DatatablesServiceProvider::class,
+
     ],
 
     /*
@@ -209,6 +212,8 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 
+        //datatables
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
 
     ],

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'SearchesController@search');
+//Route::get('/', 'SearchesController@search');
 
 Route::auth();
 
@@ -26,3 +26,12 @@ Route::resource('teams', 'TeamsController');
 Route::any('search', ['as'=>'searches.index', 'uses'=>'SearchesController@search'] );
 
 //Route::resource('queries', 'QueryController');
+// Route::controller('datatables', 'DatatablesController', [
+//     'anyData'  => 'datatables.data',
+//     'getIndex' => 'datatables',
+// ]);
+
+Route::get('/', 'DatatablesController@getIndex');
+
+Route::get('datatables/data', ['as'=>'datatables.data', 'uses' => 'DatatablesController@anyData'] );
+
