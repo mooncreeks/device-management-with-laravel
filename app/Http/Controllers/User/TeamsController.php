@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Team;
+use App\Models\Team as Team;
 
 use Session;
 

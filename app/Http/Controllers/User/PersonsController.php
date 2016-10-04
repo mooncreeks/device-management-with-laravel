@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Person;
+use App\Models\Person as Person;
 
 use Session;
 
