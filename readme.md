@@ -17,6 +17,9 @@ cp .env.example .env
 provide your configuration details
 
 ##then
+
 php artisan migrate
 
-#php artisan serve :)
+##then
+
+#php artisan serve
