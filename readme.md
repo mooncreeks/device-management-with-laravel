@@ -14,7 +14,9 @@ composer install
 
 cp .env.example .env
 
+provide your configuration details
 
-provide your configuration details and
+##then
+php artisan migrate
 
 #php artisan serve :)
