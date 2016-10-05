@@ -1,6 +1,7 @@
 <?php
-
 namespace App\Models;
+
+use App\Models\Device as Device;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,6 +24,6 @@ class Person extends Model
 
 	public function devices()
 	{
-		$this->hasOne('App\Device');
+		$this->hasOne(Device::class);
 	}
 }

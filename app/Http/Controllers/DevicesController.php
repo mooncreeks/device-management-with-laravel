@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Device;
-use App\Person;
+use App\Models\Device as Device;
+use App\Models\Person as Person;
 
 use Session;
 
