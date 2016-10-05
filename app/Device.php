@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Person;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Device extends Model
@@ -23,6 +25,6 @@ class Device extends Model
 
 	public function person()
 	{
-		return $this->belongsTo('App\Person');
+		return $this->belongsTo(Person::class);
 	}
 }
